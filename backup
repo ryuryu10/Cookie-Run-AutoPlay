@@ -1,0 +1,31 @@
+a = pygame.draw.rect(screen,(255,255,255),(pos_x1,pos_y1,pos_x2,pos_y2),1)
+    print(pos_x1,pos_y1,pos_x2,pos_y2)
+    if keyboard.is_pressed("q"):
+        if switched == 1:
+            switched = 0
+        else :
+            switched = 1
+
+    if keyboard.is_pressed("a"):
+        if switched == 1:
+            pos_x1 -= 0.1
+        else:
+            pos_x2 -= 0.1
+
+    if keyboard.is_pressed("d"):
+        if switched == 1:
+            pos_x1 += 0.1
+        else:
+            pos_x2 += 0.1
+
+    if keyboard.is_pressed("w"):
+        if switched == 1:
+            pos_y1 -= 0.1
+        else:
+            pos_y2 -= 0.1
+
+    if keyboard.is_pressed("s"):
+        if switched == 1:
+            pos_y1 += 0.1
+        else:
+            pos_y2 += 0.1
